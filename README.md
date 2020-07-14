@@ -49,7 +49,7 @@ Any Account that has Kerberos-PreAuthentication disabled is a serious security r
 
 ### User accounts with SPNs defined
 Computer accounts change their passwords every 30 days to a new random, 128 character long string.
-Different to that, the most user accounts and accounts an admin creates for a specific job, have a significantly weaker than this and won't change that often.
+Different to that, the most user accounts and accounts an admin creates for a specific job, have a password which is significantly weaker than this and won't change that often.
 If a user-account has a service principle name (SPN) defined, this weakness can be abused for a so called "kerberoast"-attack allowing an attacker to valid credentials for this account and therefore get an intial foothold into your environment.
 - https://pentestlab.blog/2018/06/12/kerberoast/
 
