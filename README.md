@@ -3,7 +3,7 @@ Some Things that hackers like in an AD environment
 
 ## About:
 This is a brief description about some security flaws in MS Active Directory.
-The goal is so wake up admins, that aren't aware of these to make their environments more robust and incraesing overall IT-security.
+The goal is so wake up admins, that aren't aware of these to make their environments more robust and increasing overall IT-security.
 For more detailed information please search the internet or use any provided link.
 You can also find more about this topic on youtube.
 I recommend this channel:
