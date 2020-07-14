@@ -22,7 +22,7 @@ To check your environment yourself, you might use tools like:
 By default (at least the last 20 years) a standard domain user, with no special privileges, is allowed to join up to ten computers to your Active Directory.
 This is still the default setting in Domains that are freshly setup and can lead to untrusted to be computers joined to your environment.
 The good news is, this can be prevented by adjusting your "Default Domain"-policy:
-Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment  -> find the entry named "Add workstations to the domain"
+__Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> User Rights Assignment  -> find the entry named "Add workstations to the domain"__
 and/or by adjusting the value "ms-DS-MachineAccountQuota" of your domain using the ADSI-Editor
 
 Links:
