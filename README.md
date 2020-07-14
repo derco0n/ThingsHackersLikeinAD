@@ -3,8 +3,18 @@ Some Things that hackers like in an AD environment
 
 ## About:
 This is a brief description about some security flaws in MS Active Directory.
+The goal is so wake up admins, that aren't aware of these to make their environments more robust and incraesing overall IT-security.
 For more detailed information please search the internet or use any provided link.
 You can also find more about this topic on youtube. I suggest this channel: https://www.youtube.com/channel/UCpoyhjwNIWZmsiKNKpsMAQQ/videos
+
+## Checking:
+To check your environment yourself, you might use tools like:
+- mimikatz (https://www.varonis.com/blog/what-is-mimikatz/)
+- kerbrute (https://github.com/ropnop/kerbrute)
+- impacket (https://www.secureauth.com/labs/open-source-tools/impacket)
+- evil-winrm (https://kalilinuxtutorials.com/evil-winrm-hacking-pentesting/)
+
+## Actual weaknesses
 
 ### standard Domain Users can join Computers to AD
 By default (at least the last 20 years) a standard domain user, with no special privileges, is allowed to join up to ten computers to your Active Directory.
@@ -33,4 +43,8 @@ https://www.msxfaq.de/windows/kerberos/krbtgt_keyrollover.htm
 Any Account that has Kerberos-PreAuthentication disabled is a serious security risk. You should avoid them whenever possible. Check that noone is member of the "Pre-Windows-2000-compatibility" group and that no account has the flag set.
 https://social.technet.microsoft.com/wiki/contents/articles/23559.kerberos-pre-authentication-why-it-should-not-be-disabled.aspx
 
-
+### User accounts with SPNs defined
+Computer accounts change their passwords every 30 days to a new random, 128 character long string.
+Different to that, the most user accounts and accounts an admin creates for a specific job, have a significantly weaker than this and won't change that often.
+If a user-account has a service principle name (SPN) defined, this weakness can be abused for a so called "kerberoast"-attack allowing an attacker to valid credentials for this account and therefore get an intial foothold into your environment.
+https://pentestlab.blog/2018/06/12/kerberoast/
