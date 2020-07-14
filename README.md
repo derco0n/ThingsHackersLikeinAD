@@ -36,6 +36,8 @@ You should never, ever use any high privileged Domain Account (like e.g. YOURDOM
 You might know that members of "Domain Admins"-group are very powerful, as they can change everything in your AD-Domain, but did you know there are plenty more groups that have rights that are very powerful as well? e.g.: "Enterprise Admins", "Backup Operators", "Print Operators".
 You should really keep track of who is member of this groups and don't overlook any nested groups.
 - https://docs.microsoft.com/de-de/windows-server/identity/ad-ds/plan/security-best-practices/appendix-b--privileged-accounts-and-groups-in-active-directory
+- https://github.com/lazywinadmin/Monitor-ADGroupMembership
+- https://www.thelazyadministrator.com/2018/12/04/get-an-active-directory-interactive-html-report-with-powershell/
 
 ### Change your krbtgt-accounts password frequently. really. do this.
 In most environments the password for the built-in account "krbtgt" never ever gets changed. As this account is used to sign kerberos-tokens it is a high vlaue target for attackers. If an attacker gets his hands on the NTLM-Hash of this account's-password, he/she is able to craft golden tickets, which allow access to everything for a timeperiod of up to 10 years! Therefore, you really should change the password for this account frequently and do it twice (i suggest one day after another) as the last two passwords are cached.
