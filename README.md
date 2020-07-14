@@ -50,3 +50,10 @@ Computer accounts change their passwords every 30 days to a new random, 128 char
 Different to that, the most user accounts and accounts an admin creates for a specific job, have a significantly weaker than this and won't change that often.
 If a user-account has a service principle name (SPN) defined, this weakness can be abused for a so called "kerberoast"-attack allowing an attacker to valid credentials for this account and therefore get an intial foothold into your environment.
 - https://pentestlab.blog/2018/06/12/kerberoast/
+
+### local administrator passwords
+Not really an AD topic but it will affect your AD security. You should avoid to use the same password for client-local administrative accounts on different machines, as the NTLM-hashes will be the same. An attacker who might gain credentials on one client, can effectively use them on other machines as well.
+This way attackers can make their way through your environment.
+To prevent this you might want to use Microsoft LAPS
+- https://www.msxfaq.de/windows/endpointsecurity/laps.htm
+- https://docs.microsoft.com/en-us/previous-versions/mt227395(v=msdn.10)?redirectedfrom=MSDN
