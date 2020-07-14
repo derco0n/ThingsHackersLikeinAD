@@ -1,4 +1,4 @@
-# ThingsHackesrLikeinAD
+# ThingsHackersLikeinAD
 Some Things that hackers like in an AD environment
 
 ## About:
