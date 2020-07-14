@@ -40,7 +40,7 @@ You should really keep track of who is member of this groups and don't overlook 
 - https://www.thelazyadministrator.com/2018/12/04/get-an-active-directory-interactive-html-report-with-powershell/
 
 ### Change your krbtgt-accounts password frequently. really. do this.
-In most environments the password for the built-in account "krbtgt" never ever gets changed. As this account is used to sign kerberos-tokens it is a high vlaue target for attackers. If an attacker gets his hands on the NTLM-Hash of this account's-password, he/she is able to craft golden tickets, which allow access to everything for a timeperiod of up to 10 years! Therefore, you really should change the password for this account frequently and do it twice (i suggest one day after another) as the last two passwords are cached.
+In most environments the password for the built-in account "krbtgt" never ever gets changed. As this account is used to sign kerberos-tokens it is a high value target for attackers. If an attacker gets his hands on the NTLM-Hash of this account's-password, he/she is able to craft golden tickets, which allow access to everything for a timeperiod of up to 10 years! Therefore, you really should change the password for this account frequently and do it twice (i suggest one day after another) as the last two passwords are cached.
 - https://www.msxfaq.de/windows/kerberos/krbtgt_keyrollover.htm
 
 ### Accounts without Kerberos-PreAuth
