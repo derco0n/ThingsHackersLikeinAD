@@ -46,6 +46,7 @@ In most environments the password for the built-in account "krbtgt" never ever g
 ### Accounts without Kerberos-PreAuth
 Any Account that has Kerberos-PreAuthentication disabled is a serious security risk. You should avoid them whenever possible. Check that noone is member of the "Pre-Windows-2000-compatibility" group and that no account has the flag set.
 - https://social.technet.microsoft.com/wiki/contents/articles/23559.kerberos-pre-authentication-why-it-should-not-be-disabled.aspx
+- https://www.scip.ch/?labs.20181011
 
 ### User accounts with SPNs defined
 Computer accounts change their passwords every 30 days to a new random, 128 character long string.
