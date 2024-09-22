@@ -76,7 +76,9 @@ certutil -csp “Microsoft Base Smart Card Crypto Provider” -importpfx C:\_INS
 runas /user:lab.administrator@yourdomain.com /smartcard cmd
 PIN = 12345678
 
-### From DNS-Admin Domain Takeover
+### From DNS-Admin to Domain Takeover
 You must be aware that DNS-Administrators (or anyone who has write-access to the DNS-Server-object) is able to load .dll's with the DNS-service.
 As the DNS-service is running as SYSTEM, this allows for a privilege escalation to domain administrator.
-More on that topic can be found [here](https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83) 
+More on that topic can be found [here](https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83)
+
+Example code: [google](https://google.com/search?q=dns-exe-persistance)
